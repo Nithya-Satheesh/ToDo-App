@@ -4,23 +4,33 @@
   padding: 2rem;
   text-align: center;
 }
-.app{
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -10%);
-}
+
 body{
   background-color: #030638;
   font-family:serif;
 }
-.app .heading h1{
+.app h1{
   text-align:center;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -10%);
 }
-.input{
+
+.app .day{
+  position: absolute;
+  top: 20%;
+  left: 45%;
+}
+.app .input{
+
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  top: 36%;
   
 }
 .small-box{
@@ -41,15 +51,18 @@ body{
 display: flex;
 justify-content: flex-start;
 }
+
 .todos .todo .left {
-  margin: 5px 0px;
+  margin: 3px 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  width: 100%;
+  width: 600px;
   height: 40px;
   border-radius: 7px;
+
+  
 }
 .todos .todo .left .checkbox{
   margin: 5px;

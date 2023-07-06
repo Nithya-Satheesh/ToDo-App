@@ -13,7 +13,7 @@ const[toDo,settoDo] = useState('');
     <div className='app'>
       <h1 className='heading'>My ToDo List</h1>
       <div className='subHeading'>
-        <h2>For {dayOfWeek}</h2>
+        <h2 className='day'>For {dayOfWeek}</h2>
         <div className='input'>
           <input value={toDo} onChange={(e)=>settoDo(e.target.value)}type="text" id="myInput" className="small-box" placeholder='Add your new ToDo...'/>
           <div className='add'>
@@ -24,10 +24,12 @@ const[toDo,settoDo] = useState('');
         <br/>
         <br/>
 
-        <div className='todos'>
+        <h2 className='subsubheading'>Active Tasks</h2>
 
+        <div className='todos'>
          { toDos.map((obj)=>{
-          return(<div className='todo'>
+          return(
+          <div className='todo'>
             <div className='left'>
               <input onChange={(e)=>{
                 console.log(e.target.checked)
@@ -39,10 +41,20 @@ const[toDo,settoDo] = useState('');
                 }))
               }} value={obj.status} type="checkbox" id="myCheckbox" name="myCheckbox" className='checkbox'/>
               <p>{obj.text}</p>
-              <i className="fa fa-times"></i>
+
+              <i onClick={(e)=>{settoDos(toDos.filter(obj2=>{
+                return obj2.id !==obj.id;}))}}
+               className="fa fa-times"></i>
             </div> 
           </div>)
-        })}
+          })}
+        </div>
+        <br/>
+        <br/>
+
+        <div>
+          <h2>Completed Tasks</h2>
+          <p></p>
         </div>
       </div>
     </div>
