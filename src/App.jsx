@@ -69,6 +69,7 @@ function App() {
           {toDos.map((task) => (
             <div className="todo" key={task.id}>
               <div className="left">
+                
                 <input
                   onChange={() => handleToggleStatus(task.id)}
                   type="checkbox"
