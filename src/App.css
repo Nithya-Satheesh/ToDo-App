@@ -1,88 +1,124 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-body{
+
+body {
   background-color: #030638;
-  font-family:serif;
-}
-.app h1{
-  text-align:center;
-  position: absolute;
-  top: 8%;
-  left: 50%;
-  transform: translate(-50%, -10%);
-}
-
-.app .day{
-  position: absolute;
-  top: 20%;
-  left: 45%;
-}
-.app .input{
-
+  font-family: serif;
   display: flex;
   justify-content: center;
-  align-items:flex-start;
-  position: absolute;
-  left: 20%;
-  width: 60%;
-  top: 36%;
-  
+  align-items: center;
+  height: 100vh;
 }
-.small-box{
+
+.app {
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+}
+
+.subHeading {
+  position: relative;
+}
+
+.day {
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+
+}
+
+.small-box {
   background-color: white;
   width: 100%;
   height: 35px;
-  color:black;
+  color: black;
   border-radius: 7px;
 }
 
-.add i{ 
- font-size: 43px; 
- cursor: pointer;
- color: grey;
+.add i {
+  font-size: 43px;
+  cursor: pointer;
+  color: grey;
 }
 
-.todos .todo{
-display: flex;
-justify-content: flex-start;
+.todos {
+  position: relative;
+  margin-top: 50px;
 }
 
-.todos .todo .left {
-  margin: 3px 0px;
+.active {
+  color: white;
+}
+
+.todo {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin: 5px 0;
+}
+
+.left {
+  margin: 3px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  width: 600px;
+  width: 800px;
   height: 40px;
   border-radius: 7px;
-
-  
 }
-.todos .todo .left .checkbox{
+
+.left .checkbox {
   margin: 5px;
   background-color: #eee;
+}
 
-}
-.todos .todo .left p{
-color: grey;
-font-size:medium;
-font-weight: 500;
-font-style: normal;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.todos .todo .left i{
+.left p {
   color: grey;
-  margin-left: auto; 
-  margin-right: 8px;
-  font-size: 20px; 
- cursor: pointer;
+  font-size: medium;
+  font-weight: 500;
+  font-style: normal;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.left i {
+  color: grey;
+  margin-left: auto;
+  margin-right: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
 
+.completed {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+}
 
+.subsubheading {
+  margin-right: 6px;
+  color: white;
+}
+
+.completedtodo {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin: 5px 0;
+  color: white;
+}
