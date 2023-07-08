@@ -30,15 +30,18 @@ function App() {
   };
 
   const handleToggleStatus = (id) => {
-    setToDos(
-      toDos.map((task) => {
-        if (task.id === id) {
-          return { ...task, status: !task.status };
+    setToDos(toDos.map((task) => {
+      if (task.id === id) {
+        const updatedTask = { ...task, status: !task.status };
+        if (updatedTask.status) {
+          setCompletedTasks([...completedTasks, updatedTask]);
+          return null; 
         }
-        return task;
-      })
-    );
+      }
+      return task;
+    }).filter(Boolean));
   };
+  
 
   const handleDeleteTask = (id) => {
     setToDos(toDos.filter((task) => task.id !== id));
@@ -69,7 +72,7 @@ function App() {
           {toDos.map((task) => (
             <div className="todo" key={task.id}>
               <div className="left">
-                
+
                 <input
                   onChange={() => handleToggleStatus(task.id)}
                   type="checkbox"
